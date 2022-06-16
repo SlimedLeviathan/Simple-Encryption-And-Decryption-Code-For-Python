@@ -47,8 +47,8 @@ while restart == "y":
 
         while counter2 <= lengthm:
             charLetter = chars.index(meslist[counter2])
-            if overboard == True:
-                charLetter = charLetter + 63
+            
+            charLetter = charLetter + 63
 
             decrypt = charLetter - key
             deChar = charlist[decrypt + 1]
