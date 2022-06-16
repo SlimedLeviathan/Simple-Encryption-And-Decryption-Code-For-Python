@@ -1,7 +1,8 @@
 import time
 chars = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 charlist = chars.replace("", "|").split("|")
-overboard = False
+charplus = chars + "|"
+charlength = charplus.index("|") / 2
 restart = "y"
 
 while restart == "y":
@@ -9,10 +10,8 @@ while restart == "y":
     Option =input(
     "Would you like to encrypt (make secret message) or decrypt (solve secret message)? (Use either E or D or this wont work.) \n")
     option = Option.casefold()
+    key = key % charlength
 
-    if key >= 63:
-        key = key%63
-        overboard = True
     if option == "e":
         text = input("What is your message? \n")
         textplus = text + "|"
@@ -47,8 +46,8 @@ while restart == "y":
 
         while counter2 <= lengthm:
             charLetter = chars.index(meslist[counter2])
-            
-            charLetter = charLetter + 63
+
+            charLetter = charLetter + charlength
 
             decrypt = charLetter - key
             deChar = charlist[decrypt + 1]
