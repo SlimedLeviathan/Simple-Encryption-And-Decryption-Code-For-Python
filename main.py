@@ -2,8 +2,8 @@ import time
 Chars = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 chars = Chars + Chars
 charlist = chars.replace("", "|").split("|")
-charplus = chars + "|"
-charlength = charplus.index("|") / 2
+charplus = Chars + "|"
+charlength = charplus.index("|")
 restart = "y"
 
 while restart == "y":
