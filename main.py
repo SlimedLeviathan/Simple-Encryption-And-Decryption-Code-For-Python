@@ -1,5 +1,6 @@
 import time
-chars = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+Chars = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+chars = Chars + Chars
 charlist = chars.replace("", "|").split("|")
 charplus = chars + "|"
 charlength = charplus.index("|") / 2
