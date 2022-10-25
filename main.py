@@ -3,7 +3,7 @@ Chars = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.,<>?!@#
 chars = Chars + Chars
 charlist = chars.replace("", "|").split("|")
 charplus = Chars + "|"
-charlength = charplus.index("|")
+charlength = len(charplus)
 restart = "y"
 
 while restart == "y":
